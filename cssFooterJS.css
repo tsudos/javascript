@@ -1,0 +1,104 @@
+@charset "UTF-8";
+#bloc {
+    max-width: 100%;
+    /*max-height: 100%;*/
+    background-color: rgb(0, 50, 215);
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    max-width: 100%;
+    height: 10em;
+    background-color: rgb(0, 50, 215);
+    position: relative;
+    margin: 0 auto;
+    background-image: url("image/logo.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 6em;
+    color: rgb(0, 162, 255);
+}
+
+header h1 {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 300px;
+    margin: 0px;
+    text-decoration: underline rgb(0, 162, 255);
+}
+
+header h3 {
+    font-size: 15px;
+    padding-top: 30px;
+    padding-left: 300px;
+}
+
+section {
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: rgb(0, 75, 215);
+    position: relative;
+}
+
+section h1 {
+    margin-top: 0;
+    margin-left: 5px;
+    /*
+barre le texte
+text-decoration:line-through;*/
+    text-decoration: underline red;
+}
+
+.contenu {
+    background-color: rgb(0, 75, 215);
+    margin-left: 15px;
+    color: rgb(0, 162, 255);
+}
+
+.contenu h3 {
+    color: black;
+    text-decoration: underline red;
+}
+
+section p {
+    margin-bottom: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    height: 15%;
+    background-color: rgb(0, 50, 215);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+footer p {
+    display: inline-block;
+    margin: 2em;
+}
+
+.pfooter {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+    margin: 0;
+    width: 40%;
+}
+
+.scriptF {
+    float: right;
+    font-size: 15px;
+    margin: 0;
+    width: 40%;
+}
+
+
+/*script pdp
+
+#piedDePage {
+    border: 1 solid black;
+    background-color: black;
+    color: white;
+}*/

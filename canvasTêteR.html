@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tete ronde</title>
+
+
+
+
+<script>
+
+function TeteR() {
+    var c = document.getElementById("têteR"); 
+    var ctx = c.getContext("2d");
+     //tete ronde
+    ctx.beginPath();     
+    ctx.arc(100,100,50,0,Math.PI*2,true);
+    ctx.fillStyle ="black"; 
+    ctx.fill();
+    ctx.stroke();
+
+    //bouche
+    ctx.beginPath();     
+    ctx.arc(100,100,30,0,Math.PI,false);
+    ctx.strokeStyle ="white";
+    ctx.lineWidth = 2;  
+    ctx.stroke();
+
+    /*crete   
+    ctx.beginPath();     
+    ctx.arc(100,100,60,Math.PI/4,Math.PI*(3/4),true);
+    ctx.strokeStyle ="green";
+    ctx.lineWidth = 2;
+    ctx.fillStyle ="green"; 
+    ctx.fill();
+    ctx.stroke();
+*/
+
+    //nez
+    ctx.beginPath();     
+    ctx.arc(100,100,10,0,Math.PI*2,false);
+    ctx.strokeStyle ="white";
+    ctx.lineWidth = 2;
+    ctx.fillStyle ="red"; 
+    ctx.fill();
+    ctx.stroke();
+
+
+    //yeux gauche
+    var c = document.getElementById("têteR"); 
+    var ctx = c.getContext("2d");
+    ctx.beginPath();     
+    ctx.arc(80,80,5,0,Math.PI*2,true);
+    ctx.fillStyle ="white"; 
+    ctx.fill();
+     //yeux droit
+     var c = document.getElementById("têteR"); 
+    var ctx = c.getContext("2d");
+    ctx.beginPath();     
+    ctx.arc(120,80,5,0,Math.PI*2,true);
+    ctx.fillStyle ="white"; 
+    ctx.fill();
+}
+
+function CouleurS() {
+    var c = document.getElementById("couleurD"); 
+    var ctx = c.getContext("2d");
+    var gradient = ctx.createRadialGradient (50,50,120,0,150,250);
+    gradient.addColorStop(0, "black");
+    gradient.addColorStop(0.10, "blue");
+    gradient.addColorStop(0.35, "white");
+    gradient.addColorStop(0.55, "red");
+    gradient.addColorStop(1, "black");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0,0,c.width,c.height);
+}
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+
+        <div >
+
+                <canvas id="têteR" width="500px" height="500px">Canvas d'une tête</canvas>
+                <p>TETE RONDE</p>
+        
+                <button name="envoyer" onclick="TeteR();">RegardeR</button>
+            </div>
+
+            <div >
+
+                    <canvas id="couleurD" width="500px" height="500px">Canvas de couleurs degradées</canvas>
+                    <p>Couleurs Degradées</p>
+            
+                    <button name="envoyer" onclick="CouleurS();">Brille !</button>
+                </div>
+
+
+                <div >
+
+                        <canvas id="image" width="500px" height="500px">Canvas de couleurs degradées</canvas>
+                        <p>IMAGE</p>
+                    
+                           <script>
+                            var c = document.getElementById("image"); 
+                            var ctx = c.getContext("2d");
+                            var image = new Image();
+                            image.src = 'mer.jpg';
+                            image.onload = function() {
+                                ctx.drawImage(this,0,0);
+                            }
+                        </script>
+                
+                    
+                    </div>
+
+
+</body>
+</html>

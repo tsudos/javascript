@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Date</title>
+
+</head>
+<body>
+
+    <script >
+        var maintenant = new Date();
+        alert(maintenant);
+        // methode get date : renvoi un nb entier correspondant au nbr du jours
+        var jour = maintenant.getDate();
+        // methode getMonth
+        var mois = maintenant.getMonth() + 1 ;
+        // methode getFullYear
+        var annee = maintenant.getFullYear();
+
+        var jSemaine = maintenant.getDay();
+
+        var strjSemaine = "";
+
+        switch (jSemaine) {
+case 0 : strjSemaine = "Dimanche"; break;
+case 1 : strjSemaine = "Lundi"; break;
+case 2 : strjSemaine = "Mardi"; break;
+case 3 : strjSemaine = "Mercredi"; break;
+case 4 : strjSemaine = "Jeudi"; break;
+case 5 : strjSemaine = "Vendredi"; break;
+case 6 : strjSemaine = "Samedi"; break;
+
+        }
+
+
+
+
+        document.writeln (strjSemaine + " " + jour + "/" + mois + "/"+ annee);
+
+    </script>
+
+
+</body>
+</html>

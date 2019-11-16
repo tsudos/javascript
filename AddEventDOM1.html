@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Site exo1 JS Listener/DOM</title>
+    <link rel="stylesheet" type="text/css" href="AddEventDOM1.css">
+
+    <!--pour faire l'appel du script-->
+    <script type="text/javascript" src="AddEventDOM1.Js">
+    </script>
+
+    <script type="text/javascript">
+    </script>
+
+</head>
+
+<body>
+    <div id="bloc">
+
+        <header>
+            <h1 class="title">Site exo1 JS Listener/DOM
+            </h1>
+
+            <h3>Quel est votre parfum de glace préféré ?
+            </h3>
+        </header>
+
+        <section>
+
+            <form>
+                <div>
+                    <input type="radio" id="pistache" name="parfum" value="la Pistache">
+                    <label for="pistache">pistache</label>
+
+                    <input type="radio" id="Café" name="parfum" value="le Café" checked>
+                    <label for="Café">Café</label>
+
+                    <input type="radio" id="Vanille" name="parfum" value="la Vanille">
+                    <label for="Vanille">Vanille</label>
+
+                    <input type="radio" id="Chocolat" name="parfum" value="le Chocolat">
+                    <label for="Chocolat">Chocolat</label>
+                </div>
+                <div>
+                    <button type="button" name="popup" value="infoParfum" onclick="popupParfum()">Afficher la case à cocher</button>
+                </div>
+            </form>
+        </section>
+        <script type="text/javascript">
+        </script>
+    </div>
+
+
+    <div id="hidden">
+
+        <footer id="footer">
+
+
+            <p class="pfooter">essai<br/>deux</p>
+
+            <script type="text/javascript">
+                document.getElementById('hidden').style.visibility = 'hidden';
+            </script>
+
+
+
+
+        </footer>
+
+    </div>
+</body>
+
+</html>

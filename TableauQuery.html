@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TableauQuery</title>
+
+    <style type="text/css">
+        .fpair {
+            font-size: 15px;
+            background-color: green;
+            color: white;
+        }
+        
+        .fimpair {
+            font-size: 15px;
+            background-color: yellow;
+            color: green;
+        }
+        
+        .fetoile {
+            color: purple;
+            background: red;
+            font-Size: 15px;
+        }
+    </style>
+
+
+
+
+    <script type="text/javascript">
+        function changerStyle() {
+            var i;
+
+
+            //changement du thead
+            var trh = document.querySelectorAll('thead tr');
+            //ligne titre colonne
+            trh[0].style.color = "red";
+            trh[0].style.background = "black";
+
+
+
+
+            var trhpair = document.querySelectorAll('tbody tr:nth-child(2n)');
+            var trhimpair = document.querySelectorAll('tbody tr:nth-child(2n+1)');
+
+
+            //ligne impaire
+            for (i = 0; i < trhimpair.length; i++) {
+                /*trhimpair[i].style.color = "green";
+                trhimpair[i].style.background = "yellow";
+                trhimpair[i].style.fontSize = "15px";*/
+                trhimpair[i].classList.add('fimpair');
+            }
+
+            //ligne paire
+            for (i = 0; i < trhpair.length; i++) {
+                /*  trhpair[i].style.color ="white";
+                    trhpair[i].style.background = "green";
+                    trhpair[i].style.fontSize="15px";*/
+                trhpair[i].classList.add('fpair');
+            }
+
+
+
+            //var trs = document.querySelectorAll('table tbody tr');
+            //tout les span qui sont dans la class item et l'id menu sont stocké sous un format tableau
+
+            /*   
+                si document.querySelectorAll('table tbody tr');
+
+                //alert("taille du tableau * " + tds.length );
+
+                //ligne impaire
+                    for (i=1 ; i<trs.length; i+=2) {
+                        trs[i].style.color ="green";
+                        trs[i].style.background = "yellow";
+                        trs[i].style.fontSize="15px";
+                    }
+                //ligne paire
+                    for (i=0 ; i<trs.length; i+=2) {
+                        trs[i].style.color ="white";
+                        trs[i].style.background = "blue";
+                        trs[i].style.fontSize="15px";
+                    }
+            */
+
+            // cellule avec * / ne marche pas
+            var tds = document.getElementsByName('*');
+            for (i = 0; i < tds.length; i++) {
+                tds[i].classList.add('.fetoile');
+            }
+
+        }
+
+
+        function effacer_Style() {
+            var trhpair = document.querySelectorAll('tbody tr:nth-child(2n)');
+            var trhimpair = document.querySelectorAll('tbody tr:nth-child(2n+1)');
+            var i
+
+            for (i = 0; i < trhpair.length; i++) {
+                /*  trhpair[i].style.color ="white";
+                    trhpair[i].style.background = "green";
+                    trhpair[i].style.fontSize="15px";*/
+                trhpair[i].classList.remove('fpair');
+            }
+
+            for (i = 0; i < trhimpair.length; i++) {
+                trhimpair[i].classList.remove('fimpair');
+            }
+
+        }
+
+
+        function alterner_Style() {
+            var trhpair = document.querySelectorAll('tbody tr:nth-child(2n)');
+            var trhimpair = document.querySelectorAll('tbody tr:nth-child(2n+1)');
+            var i
+
+            for (i = 0; i < trhpair.length; i++) {
+                /*  trhpair[i].style.color ="white";
+                    trhpair[i].style.background = "green";
+                    trhpair[i].style.fontSize="15px";*/
+
+                trhpair[i].classList.toggle('fpair');
+            }
+
+            for (i = 0; i < trhimpair.length; i++) {
+                trhimpair[i].classList.toggle('fimpair');
+            }
+
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <h2 id="idh2">Tableau changement de mise en forme</h2>
+
+
+
+    <table border="2">
+        <caption>Tableau </caption>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+                <td name="i"> i </td>
+            </tr>
+            <tr>
+                <td name="i"> i </td>
+                <td name="i"> i </td>
+                <td name="*" style="text-decoration: underline;"> * </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+    <button name="envoyer" onclick="changerStyle();">Changer</button>
+    <button name="envoyer" onclick="effacer_Style();">effacer</button>
+    <button name="envoyer" onclick="alterner_Style();">alterner</button>
+
+</body>
+
+</html>

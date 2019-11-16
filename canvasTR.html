@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CANVAS</title>
+
+<style type="text/css">
+body {
+    max-width: 900px;
+}
+    div {
+    display: inline-block;
+    padding :10px;
+    border : 1px solid black;
+    margin : 10px;
+    background-color: rgb(87, 162, 192);
+     }
+
+    canvas {
+        border : 1px groove black;
+        background-color: grey;
+    }
+
+    #triangle {
+
+        background-color: red;
+    }
+
+    #bateau{
+        background-color: rgb(37, 103, 226);
+    }
+
+    #rectangle {
+        background-color: rgb(2, 2, 156);
+    }
+
+    #tête {
+        background-color: rgb(170, 170, 170);
+    }
+
+</style>
+
+
+<script type="text/javascript" >
+function Triangle() {
+    var c = document.getElementById("triangle"); // cibler le canvas
+    var ctx = c.getContext("2d"); //annoncer le contexte 2d 3d
+    ctx.beginPath(); // début du dessin
+    ctx.moveTo(70,10); //placement du 1er point
+    ctx.lineTo(70,130); // dessin de la 1ère ligne
+    ctx.lineTo (200,65);
+    ctx.closePath(); // fin du dessin
+    ctx.lineWidth = 1; //epaisseur du tracé
+    ctx.strokeStyle = "yellow"; // couleur du tracé
+    ctx.fillStyle ="green"; // remplissage interieur
+    ctx.fill(); //fermeture 
+    ctx.stroke(); //fermeture
+
+}
+
+
+
+function Rectangle() {
+    var c = document.getElementById("rectangle"); // cibler le canvas
+    var ctx = c.getContext("2d"); //annoncer le contexte 2d 3d
+    //1ere version
+    /*ctx.beginPath(); // début du dessin
+    ctx.moveTo(30,20); //placement du 1er point
+    ctx.lineTo(270,20); // dessin de la 1ère ligne
+    ctx.lineTo (270,140);
+    ctx.lineTo (30,140);
+    ctx.closePath(); // fin du dessin
+    ctx.lineWidth = 3; //epaisseur du tracé
+    ctx.strokeStyle = "white"; // couleur du tracé
+    ctx.fillStyle ="red"; // remplissage interieur
+    ctx.fill(); //fermeture 
+    ctx.stroke(); //fermeture*/
+
+//ou bien 
+
+ctx.fillStyle ="red";
+ctx.fillRect(20,20,240,120)
+;
+
+
+}
+
+//expemple  pour texte avec ecriture raccourcie
+function Texte() {
+  var ctx = document.getElementById('text').getContext('2d'); //version raccourcie
+  ctx.font = '60px serif'; //type et taille ecriture
+  ctx.strokeStyle = "red"; // couleur du tracé
+  ctx.strokeText('TSUD', 70, 100); //  contour texte ( text, position x , position y) du debut du dessin
+  ctx.stroke(); //fermeture
+}
+
+
+function Bateau() {
+
+
+
+
+    var c = document.getElementById("bateau"); // cibler le canvas
+    var ctx = c.getContext("2d"); //annoncer le contexte 2d 3d
+    //voile
+    ctx.beginPath(); 
+    ctx.moveTo(120,30); 
+    ctx.lineTo(120,100); 
+    ctx.lineTo (250,100);
+    ctx.closePath(); 
+    ctx.lineWidth = 1; 
+    ctx.fillStyle ="lightblue"; 
+    ctx.fill();
+
+    //tete marin
+    ctx.beginPath();     
+    ctx.arc(95,95,6,0,Math.PI*2,true);
+    ctx.fillStyle ="black";
+    ctx.lineWidth = 3;  
+    ctx.fill();
+
+    //corps marin
+    ctx.beginPath();     
+    ctx.moveTo(95,95); 
+    ctx.lineTo(95,120);
+    //bras gauche
+    ctx.moveTo(95,105); 
+    ctx.lineTo(87,102);
+    ctx.lineTo(85,98);
+    //bras droit
+    ctx.moveTo(95,105); 
+    ctx.lineTo(110,103);
+
+    ctx.closePath();
+    ctx.strokeStyle = "black";
+    ctx.stroke();
+    
+    //coque
+    ctx.beginPath(); 
+    ctx.moveTo(10,110);
+    ctx.lineTo (250,110);
+    ctx.lineTo (220,130);
+    ctx.lineTo(40,130); 
+    ctx.closePath(); 
+    ctx.lineWidth = 1; 
+    ctx.strokeStyle = "brown";
+    ctx.fillStyle ="rgb(90, 81, 81)"; 
+    ctx.fill();
+    ctx.stroke();
+
+    //mât
+    ctx.beginPath(); 
+    ctx.moveTo(110,30); 
+    ctx.lineTo(110,110); 
+    ctx.closePath(); 
+    ctx.lineWidth = 5;
+    ctx.fillStyle ="brown"; 
+    ctx.lineJoin ="mitter";
+    ctx.lineCap ="round"
+    ctx.fill();
+    ctx.stroke(); 
+
+    //soleil
+    ctx.beginPath();     
+    ctx.arc(0,0,25,0,Math.PI*2,true);
+    ctx.fillStyle ="yellow"; 
+    ctx.fill();
+    
+
+}
+
+function Tete() {
+    var c = document.getElementById("tête"); 
+    var ctx = c.getContext("2d");
+    //visage
+    ctx.fillStyle ="white";
+    ctx.fillRect(5,5,290,140);
+    //bouche
+    ctx.fillStyle ="green";
+    ctx.fillRect(40,100,225,25);
+
+    //yeux
+    ctx.fillStyle ="black";
+    ctx.fillRect(50,40,50,30);
+
+    //yeux
+    ctx.fillStyle ="black";
+    ctx.fillRect(200,40,50,20);
+
+    //nez
+    ctx.fillStyle ="red";
+    ctx.fillRect(125,60,50,30);
+;
+}
+
+function TeteR() {
+    var c = document.getElementById("têteR"); 
+    var ctx = c.getContext("2d");
+     //tete marin
+    ctx.beginPath();     
+    ctx.arc(150,150,100,0,Math.PI*2,true);
+    ctx.fillStyle ="black";
+    ctx.lineWidth = 3;  
+    ctx.fill();
+;
+}
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+    <h2 id="idh2">CANVAS</h2>
+
+
+
+    <div >
+        <canvas id="triangle" width="500px" height="500px">Canvas d'un Triangle</canvas>
+        <p>TRIANGLE</p>
+        <button name="envoyer" onclick="Triangle();">DESSINER</button>
+    </div>
+
+
+    <div >
+
+        <canvas id="rectangle" width="500px" height="500px">Canvas d'un rectangle</canvas>
+        <p>RECTANGLE</p>
+
+        <button name="envoyer" onclick="Rectangle();">DESSINER</button>
+    </div>
+
+    <div >
+
+        <canvas id="text" width="500px" height="500px">Canvas d'un Texte</canvas>
+        <p>TEXTE</p>
+    
+        <button name="envoyer" onclick="Texte();">ECRIRE</button>
+    </div>
+
+    <div >
+
+            <canvas id="bateau" width="500px" height="500px">Canvas d'un Bateau</canvas>
+            <p>BATEAU</p>
+        
+            <button name="envoyer" onclick="Bateau();">NAVIGUER</button>
+    </div>
+
+    <div >
+
+        <canvas id="tête" width="500px" height="500px">Canvas d'une tête</canvas>
+        <p>TETE</p>
+
+        <button name="envoyer" onclick="Tete();">Regarde</button>
+    </div>
+
+
+        <div >
+
+                <canvas id="têteR" width="500px" height="500px">Canvas d'une tête</canvas>
+                <p>TETE RONDE</p>
+        
+                <button name="envoyer" onclick="TeteR();">RegardeR</button>
+            </div>
+
+</body>
+</html>

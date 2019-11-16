@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Site exo3 JS Listener/DOM</title>
+    <link rel="stylesheet" type="text/css" href="AddEventDOM3.css">
+
+    <!--pour faire l'appel du script-->
+    <script type="text/javascript" src="AddEventDOM3.Js">
+    </script>
+
+    <script type="text/javascript">
+        var list;
+        window.addEventListener('load', change_valeur);
+    </script>
+
+</head>
+
+<body>
+    <div id="bloc">
+
+        <header>
+            <h3>Selection plage d'âge</h3>
+        </header>
+
+        <section>
+
+            <form>
+                <legend>Selectionnez la plage d'âge à laquelle vous appartenez :</legend>
+                <div>
+                    <select name="select_age" id="select_age" onchange="change_valeur()">
+                                <option value="1">0-17 ans</option> 
+                                <option value="2" >18- 20 ans</option>
+                                <option value="3" selected>21- 30 ans</option>
+                                <option value="4">31- 50 ans</option>
+                                <option value="5">50- 64 ans</option>
+                                <option value="6">65- 75 ans</option>
+                                <option value="7">76 ans- à la fin</option>
+                        </select>
+                </div>
+            </form>
+        </section>
+        <script type="text/javascript ">
+        </script>
+    </div>
+
+</body>
+
+</html>

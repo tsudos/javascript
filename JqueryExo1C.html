@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>exo titre JQuery</title>
+
+    <!--pour faire l'appel du script-->
+    <script type="text/javascript" src="jquery-3.4.1.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('h1').html($('title').html());
+            $('#IMG').html('<img src="image/evolution.jpg"/>');
+        });
+
+
+
+
+
+        $(document).ready(function() {
+            // On cache la zone de texte
+            $('#toggle').hide();
+            // toggle() lorsque le lien avec l'ID #toggler est cliqué
+            $('#toggler').click(function() {
+                $('#toggle').toggle(400);
+                return false;
+            });
+        });
+
+        //avant
+        $(document).ready(function() {
+            $('#Avant').click(function() {
+                $('span').prepend('<img src="image/logo.png"/>');
+            });
+        });
+
+
+
+        //effacer
+        $(document).ready(function() {
+            $('#Effacer').click(function() {
+                $('span').replaceWith('<span><img src="image/alan-turing.jpeg" /></span>');
+            });
+        });
+
+
+
+        //apres
+        $(document).ready(function() {
+            $('#Apres').click(function() {
+                $('span').append('<img src="image/logo.png"/>');
+            });
+        });
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <div>
+        <h1 id="TSUD">
+        </h1>
+
+        <p>Nous devons faire 3 exercices différents, que je vais mettre dans le même fichier</p>
+    </div>
+
+    <div id="IMG">
+    </div>
+
+    <div id="remplace">texte de depart</div>
+    <button id="button">Modifie le texte</button>
+    <script src="JqueryExo1C.js"></script>
+
+
+
+
+
+    <div>
+        <p id="toggler">texte</p>
+    </div>
+    <div id="toggle">
+        <img src="image/logo.png" />
+    </div>
+
+
+
+
+    <div>
+        <h3> Méthodes AVANT(PREPEND) / APRES(APPEND)</h3>
+        <span><img src="image/alan-turing.jpeg" /></span>
+        <p><button id="Avant">Ajout avant</button>
+            <button id="Effacer">Effacer</button>
+            <button id="Apres">Ajout après</button></p>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

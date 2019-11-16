@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<title>styles</title>
+<meta charset="utf-8">
+
+<style type="text/css">
+
+.style {
+    color: white;
+    background-color: black;
+    border : 1px dotted red;
+    padding-left : 5px;
+}
+
+
+
+</style>
+
+
+
+<script type="text/javascript">
+
+function changer_style(){
+   
+    var Cstyle = document.getElementById("parag1");
+    //add active alors que toggle active et desactive
+    Cstyle.classList.toggle("style");
+    for(var i = 0; i <10 ; i = i+ 2)
+    document.writeln(i);
+    
+    /*Cstyle.style.color="white";
+    Cstyle.style.backgroundColor="black";
+    Cstyle.style.border="1px dotted black";
+    Cstyle.style.paddingLeft="5px";*/
+}
+
+
+</script>
+</head>
+
+
+
+<body>
+
+    <p id="parag1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    .
+</p>
+
+<button onclick="changer_style()">Changer Style</button>
+
+</body>
+</html>

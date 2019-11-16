@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Site exo2 JS Listener/DOM</title>
+    <link rel="stylesheet" type="text/css" href="AddEventDOM2.css">
+
+    <!--pour faire l'appel du script-->
+    <script type="text/javascript" src="AddEventDOM2.Js">
+    </script>
+
+    <script type="text/javascript">
+        var PDP, SEC, IMG;
+        window.addEventListener('load', setupListeners);
+    </script>
+
+    <style type="text/css">
+        #IMG {
+            opacity: 0.2;
+        }
+        
+        body {
+            background-color: rgba(0, 0, 255, 0.3);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <header>
+            <h1 class="title">Site exo2 JS Listener/DOM</h1>
+            <h2>Alan Turing</h2>
+        </header>
+    </div>
+
+    <div id="section">
+        <section>
+            <img src="image/alan-turing.jpeg" onclick="imgClick()" id="IMG">
+            <p id="Alan">né le 23 juin 1912 à Londres et mort le 7 juin 1954 à Wilmslow, est un mathématicien et cryptologue britannique, auteur de travaux qui fondent scientifiquement l'informatique. </p>
+        </section>
+
+        <script type="text/javascript">
+        </script>
+    </div>
+
+
+    <div id="footer">
+        <footer>
+            <h4>Machine de Turing</h4>
+            <p class="machine">En informatique théorique, une machine de Turing est un modèle abstrait du fonctionnement des appareils mécaniques de calcul, tel un ordinateur.<br> Ce modèle a été imaginé par Alan Turing en 1936, en vue de donner une définition précise au
+                concept d’algorithme ou de « procédure mécanique ».<br> Il est toujours largement utilisé en informatique théorique, en particulier dans les domaines de la complexité algorithmique et de la calculabilité. </p>
+            <h4 class="H4B">Cleverbot</h4>
+            <p>Cleverbot est un logiciel de chat utilisant un algorithme d'intelligence virtuelle pour établir une conversation avec les utilisateurs.<br> Créé en 1988 par Rollo Carpenter, un pionnier de l'intelligence artificielle, il a été mis en ligne
+                en 1997.
+                <br> Il est le successeur de Jabberwacky, un autre agent conversationnel du même auteur, les deux logiciels usant d'un algorithme différent pour « apprendre ». </p>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>

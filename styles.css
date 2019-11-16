@@ -1,0 +1,161 @@
+body,
+div,
+h1,
+form,
+fieldset,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    position: relative;
+    background: #202020;
+}
+
+#page {
+    width: 972px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    width: 972px;
+    height: 131px;
+    background: url("images/background-grafpedia.jpg") 0 0 no-repeat;
+    position: relative;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 55px;
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: left;
+}
+
+ul li a {
+    padding: 0 14px 0 14px;
+    margin: 0;
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    color: #8d8d8d;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #080808;
+    font-weight: bold;
+}
+
+#sousmenu {
+    background: url("images/bg_menu_top.jpg") 0 0 repeat-x;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+}
+
+.sousmenu:hover,
+.actif {
+    background: #fff;
+    color: #202020;
+    text-shadow: none;
+    height: 50px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+ul li .login_form {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    background: #fff;
+    padding: 15px;
+    width: 226px;
+    height: 150px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: none;
+}
+
+ul li .login_form span {
+    background: #f2efea;
+    padding: 3px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    float: left;
+    margin: 0 0 14px 0;
+}
+
+ul li .login_form input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #cdc8c4;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #91938b;
+    font-weight: bold;
+}
+
+ul li .login_form input::-webkit-input-placeholder {
+    color: #cdc8c4;
+    text-shadow: 0px -1px 0px #38506b;
+}
+
+ul li .login_form input:-moz-placeholder {
+    color: #cdc8c4;
+    text-shadow: 0px -1px 0px #38506b;
+}
+
+ul li .login_form input[type=submit] {
+    float: right;
+    background: url("images/bg_menu_top_submit.jpg") 0 0 repeat-x #ffb004;
+    border: 1px solid #e5a53b;
+    padding: 0;
+    margin: 0;
+    height: 34px;
+    line-height: 34px;
+    width: 80px;
+    font-weight: bold;
+    color: #996319;
+    text-shadow: 0 1px 1px #ffcc55;
+    cursor: pointer;
+}
+
+ul li .login_form input[type=submit]:active {
+    margin: 1px 0 0 0;
+}
+
+ul li .login_form a {
+    font-size: 10px;
+    text-shadow: none;
+    padding: 0;
+    margin: 10px 0 0 5px;
+    height: 16px;
+    line-height: 16px;
+    color: #8d8d8d;
+}
+
+ul li .login_form a:hover {
+    border-bottom: 1px dotted #8d8d8d;
+}

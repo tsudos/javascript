@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <title>redirection</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .chronometre{
+                margin: auto ;
+                width: 300px;
+                text-align: center;
+                }
+            .tim{
+                margin: auto;
+                width: 300px;
+                border: 1px solid rgba(0,0,0,0.5);
+                padding:5px 0;
+                text-align: center;
+                font-size: 1.5em;
+                font-family: digital;
+                margin-bottom: 10px;
+                }
+            button{
+                background: #3498db;
+                color: #fff;
+                width: 70px;
+                border-radius: 5px;
+                line-height: 1.5em;
+                border: none
+                }
+        </style>
+        <script type="text/javascript">
+        //var seconde=10, ms=60;
+        var id = null;
+        //var idseconde;
+        //var idms;
+        function rediriger() {
+                location.href="http://www.google.com";
+
+        }
+
+
+        //1er fonction
+        function démarrer(){
+            //10000 ms = 10 seconde
+            id= setTimeout(rediriger,10000);
+        }
+
+        //3eme fonction
+        function arreter() {
+            clearTimeout(id);
+        }
+
+
+        </script>
+
+    </head>
+
+    <body onload="démarrer();">
+       
+        <div>
+        <button name="arreter" onclick="arreter();"> Stop redirection </button>
+        </div>        
+    </body>
+</html>

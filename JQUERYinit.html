@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQUERY init</title>
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+<script type="text/javascript" src="JQUERY 3-4-1.min.js"></script>
+
+<script type="text/javascript">
+
+function action() {
+//selectionner tout les paragraphe avec JQUERY pour appliquer le style/methode .red et -format  (:odd selection des selecteurs impaires comme nth.child(2n))
+    $('p:odd').addClass('red').addClass('format');
+    //permet de voir ce que contient l'id titre('#titre') et de le remplacer par autre chose('title' = le tire de la page)
+    $('#titre').html($('title').html());
+}
+
+//marche pas
+
+function image_ajout() {
+    $('#image').html($('img[src$=mer.jpg]').html());
+}
+
+</script>
+
+<style type="text/css">
+.red{   
+    color : red;
+
+}
+
+.format{
+    font-size : 1.2em;
+}
+
+
+</style>
+
+
+
+
+</head>
+
+
+<body onload="action();">
+
+    <script type="text/javascript">
+    $('body').html("Hello World");
+    </script>
+
+
+    <h1 id="titre">Qu'est-ce que le Lorem Ipsum?</h1>
+        <div id="image">essai pas photo! 
+        <button onclick="image_ajout()">Ajout Image</button>     
+        </div>
+
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+        Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+
+    <h1>Pourquoi l'utiliser?</h1>
+
+        <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
+        L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.
+        est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</p>
+
+    <h1>Qu'est-ce que le Lorem Ipsum?</h1>
+
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+        Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+
+    <h1>Pourquoi l'utiliser?</h1>
+
+        <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
+        L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.
+        est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</p>
+
+
+
+
+</body>
+
+
+</html>

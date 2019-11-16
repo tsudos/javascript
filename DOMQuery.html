@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOMQuery</title>
+
+
+
+
+<script type="text/javascript">
+
+
+function changerStyle() {
+    var spansI = document.querySelectorAll('#menu .item span');
+//tout les span qui sont dans la class item et l'id menu sont stocké sous un format tableau
+    var spansM = document.querySelectorAll('#menu span');
+    var i;
+
+
+        alert("taille de spansI " + spansI.length + " taille de spansM " +spansM.length);
+        
+        spansM[2].innerHTML = "<img src ='mer.jpg' width=100/>";
+        spansM[4].innerHTML = "<img src ='image/logo.png' />";
+
+        for (i=0; i<spansI.length; i++) {
+            spansI[i].style.color ="red";
+            spansI[i].style.background = "blue";
+        }
+
+
+        // += pour rajouté du contenue à celui existant
+        spansM[3].innerHTML += " rien changé !";
+        spansM[0].innerHTML = "plus le même élément ! ";
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+</head>
+
+
+
+
+<body>
+    <h2 id="idh2">Query selector</h2>
+
+
+    <div id="menu">
+        <div class="item">
+            <span>Element 1</span>
+            <span>Element 2</span>
+            
+        </div>
+        <div class="publicité">
+                <span>Element 3</span>
+                <span>Element 4</span>
+                <span>Element 5</span>
+            </div>
+    </div>
+
+    <div id="contenu">
+        <span>introduction au contenu de la page ....</span>               
+    </div>
+
+
+
+
+
+
+
+<button name="envoyer" onclick="changerStyle();">Changer</button>
+</body>
+
+</html>

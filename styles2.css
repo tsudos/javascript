@@ -1,0 +1,84 @@
+body,
+div,
+h1,
+form,
+fieldset,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    position: relative;
+    background: rgba(0, 150, 255, 0.6);
+}
+
+#social-network {
+    width: 100%;
+    position: relative;
+    background: url("images/bg-social-network.jpg") 0 0 repeat-x #533c15;
+    height: 75px;
+    text-align: center;
+    padding: 25px 0 0 0;
+    margin: 0;
+    border-bottom: 4px solid #6d4f1c;
+    display: none;
+}
+
+#social-network .icone {
+    width: 52px;
+    height: 45px;
+    background: #2b1f0b;
+    float: left;
+    position: relative;
+    margin: 0 18px 0 18px;
+    padding: 5px 0 0 0;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    border: 2px solid #44351b;
+}
+
+#social-network .icone:hover {
+    box-shadow: 0 0 10px #d3ac6a;
+    -moz-box-shadow: 0 0 10px #d3ac6a;
+    -webkit-box-shadow: 0 0 10px #d3ac6a;
+    border: 2px solid #2b1f0b;
+    background: #150f06;
+}
+
+#social-network .centrer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 680px;
+}
+
+.bouton {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    height: 30px;
+    width: 200px;
+    line-height: 30px;
+    padding: 0 15px 0 40px;
+    background-color: #6d4f1c;
+    text-decoration: none;
+    text-shadow: 0px 1px 1px #573f16;
+    color: #cdc8c4;
+}
+
+.arrow {
+    top: 6px;
+    left: 9px;
+    position: absolute;
+}

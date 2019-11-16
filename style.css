@@ -1,0 +1,41 @@
+@charset "UTF-8";
+#bloc {
+  height: 100px;
+  background-color: red;
+  position: relative;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section {
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+  width: 90px;
+  text-align: center;
+  background-color: #eee;
+  margin: 0;
+  border-right: 1px white solid;
+  list-style-type: none;
+
+}
+li a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+li a:hover {
+  background-color: #ddd;
+
+}
+

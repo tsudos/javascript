@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RangeAttribut</title>
+
+<style type="text/css">
+#title{
+    /*width : 400px;*/   
+    color : gray;
+}
+</style>
+
+
+
+
+<script type="text/javascript">
+
+// !!!!! bien mettre la variable dans la fonction !!!!!!!
+
+function update(element) {
+    var titre = document.getElementById("title");
+    if (element.getAttribute("name")=="padding") {
+        titre.style.padding = element.value+"px";}
+
+    else if (element.getAttribute("name")=="color") {
+        titre.style.backgroundColor = "rgb("+(element.value+190%255)+","+element.value+","+element.value+")";}
+    
+    else if (element.getAttribute("name")=="height") {
+        titre.style.height = element.value+"px";}
+    
+    else if (element.getAttribute("name")=="width") {
+        titre.style.width = element.value+"px";}
+
+    else if (element.getAttribute("name")=="arrondi") {
+        titre.style.borderRadius = element.value+"px";}
+
+    else if (element.getAttribute("name")=="rotation") {
+        titre.style.transform = "rotate("+element.value+"deg)";
+    }
+
+}
+
+
+
+</script>
+
+</head>
+
+
+<body>
+    <h2 id="idh2">Tableau changement de mise en forme avec des Range</h2>
+
+
+
+    <table border='2'>
+        <tbody>
+            <tr>
+                <td style="text-decoration: underline;"> couleur de fond (rgb) </td>
+                <td>0<input type="range" name="color" min="0" max="255" step=5 value="0" oninput="update(this)">255</td>
+                <td id="title" rowspan="6" align="center"><h2>  Titre de Test </h2></td>
+            </tr>
+
+            <tr>
+                <td style="text-decoration: underline;"> padding </td>
+                <td >0<input type="range" name="padding" min="0" max="100" step=5 value="0" oninput="update(this)">30</td>
+            </tr>
+
+            <tr>
+                <td style="text-decoration: underline;"> height </td>
+                <td>200<input type="range" name="height" min="200" max="500" step=5 value="200" oninput="update(this)">500</td>
+            </tr>
+
+            <tr>
+                <td style="text-decoration: underline;"> width </td>
+                <td>55<input type="range" name="width" min="55" max="400" value="55" step=5 oninput="update(this)">200</td>
+            </tr>
+
+            <tr>
+                <td style="text-decoration: underline;"> arrondi </td>
+                <td>0<input type="range" name="arrondi" min="0" max="30" step=5 value="0" oninput="update(this)">30</td>
+            </tr>
+
+            <tr>
+                <td style="text-decoration: underline;"> rotation </td>
+                <td>0<input type="range" name="rotation" min="0" max="180" step="5" value="0" oninput="update(this)">180 </td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

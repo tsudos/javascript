@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM</title>
+
+<style type="text/css">
+    h2 {
+    display: none;
+     }
+</style>
+
+
+<script type="text/javascript">
+
+function Changer(){
+    var idContact = document.getElementById("idContact");
+    var idh2 = document.getElementById("idh2");
+    //alert (idContact);
+    idContact.innerHTML ="<h1>NOUVEAU</h1>";
+    idContact.style.color="red";
+   
+    idh2.style.display = "block";
+    idh2.style.backgroundColor = "yellow";
+    idh2.style.height = "200px";
+    idh2.style.width = "200px";
+   
+
+}
+
+</script>
+
+</head>
+
+
+<body>
+<div id="idContact">
+<p>Contact</p>
+</div>
+
+<h2 id="idh2">Mon titre H2</h2>
+
+<button name="envoyer" onclick="Changer();">Changer</button>
+</body>
+
+</html>

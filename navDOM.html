@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Essai DHTML</title>
+<META  charset= charset=UTF-8">
+<script type="text/javascript">
+
+	
+	function change_enfants()
+		{
+            var para=document.getElementById("truc");
+            var first = para.firstChild;
+            var last = para.lastChild;
+             alert (para.childNodes.length+"\n\n"+ first.nodeValue +"\n\n"+ first +"\n\n"+ last +"\n\n"+ para.nodeType +"\n\n"+para.nodeName.toUpperCase());
+
+		}		
+	
+
+</script>
+
+</head>
+<body>
+<blockquote>
+<p id="truc" onclick="change_enfants();">Un texte avec plein d'enfants, <strong>en gras</strong>, <em>en italique</em>... et une image <img alt="Un dauphin" src="dauphin.jpg" height="111" width="200"></p>
+<!--#truc à 6 enfants-->
+</blockquote>
+
+</body>
+</html>
